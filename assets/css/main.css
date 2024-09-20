@@ -718,6 +718,18 @@ input, select, textarea {
 
 		}
 
+/* Video */ 
+
+	iframe {
+		display: inline-block;
+		margin: 1.5rem;
+	}
+
+	.video {
+		margin-top: 1.5rem;
+		margin-bottom: 1.5rem;
+	 }
+
 /* List */
 
 	ol {
