@@ -1723,3 +1723,47 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Name Hover Effect */
+	.name-hover {
+		cursor: pointer;
+		display: inline-block;
+		transition: all 0.5s ease;
+		position: relative;
+		background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		background-size: 200% 100%;
+	}
+
+	@keyframes gradient-shift {
+		0% {
+			background-position: 0% 50%;
+		}
+		50% {
+			background-position: 100% 50%;
+		}
+		100% {
+			background-position: 0% 50%;
+		}
+	}
+
+	.name-hover:hover {
+		transform: scale(1.1) translateY(-5px);
+		letter-spacing: 0.3rem;
+		background: linear-gradient(90deg,
+			#ffffff 0%,
+			#4fc3f7 20%,
+			#81c784 40%,
+			#ffb74d 60%,
+			#e57373 80%,
+			#ffffff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		background-size: 200% 100%;
+		animation: gradient-shift 3s ease infinite;
+		text-shadow: 0 0 30px rgba(79, 195, 247, 0.5);
+		filter: drop-shadow(0 0 20px rgba(79, 195, 247, 0.3));
+	}
